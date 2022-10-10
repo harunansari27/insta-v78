@@ -6,8 +6,8 @@ import {HomeIcon} from '@heroicons/react/solid'
 
 export default function Header() {
   return (
-  
-    <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
+    <div className="shadow-sm border-b sticky top-0 bg-white z-30">
+  <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
       {/* Left */}
         <div className="cursor-pointer h-24 w-24 relative hidden lg:inline-grid">
             <Image
@@ -38,9 +38,11 @@ export default function Header() {
          <div className="flex space-x-4 items-center">
          <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out"/>
          <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out"/>
-         <img src="https://scontent.fdel27-5.fna.fbcdn.net/v/t39.30808-6/302547608_1208764246573353_2342465497560905373_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=GkQvg9fl7-kAX9lBrFT&_nc_ht=scontent.fdel27-5.fna&oh=00_AT8MyU-3-Nxg8YTL7jvTcTW4-NA6XHRpzWwLjllFKlWmiw&oe=63499F19"  alt="user-image" className="h-10 rounded-full cursor-pointer"/>
+         <img src="https://scontent.fdel27-5.fna.fbcdn.net/v/t39.30808-6/269966508_1049051355877977_3952131903449599991_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=VbOoBmUsm9oAX-3ZT0G&_nc_ht=scontent.fdel27-5.fna&oh=00_AT_NqBGHmZzpMoSM10TopijoFRCVtL6h_b4SZZbK0xNTgg&oe=634A2C09"  alt="user-image" className="h-10 rounded-full cursor-pointer"/>
          </div>
     
     </div>
-  );
+
+    </div>
+    );
 }
