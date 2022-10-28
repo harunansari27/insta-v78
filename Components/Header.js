@@ -38,7 +38,7 @@ export default function Header() {
          <div className="flex space-x-4 items-center">
          <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out"/>
          <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out"/>
-         <img src="https://scontent.fdel27-5.fna.fbcdn.net/v/t39.30808-6/269966508_1049051355877977_3952131903449599991_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=VbOoBmUsm9oAX-3ZT0G&_nc_ht=scontent.fdel27-5.fna&oh=00_AT_NqBGHmZzpMoSM10TopijoFRCVtL6h_b4SZZbK0xNTgg&oe=634A2C09"  alt="user-image" className="h-10 rounded-full cursor-pointer"/>
+         <img src="https://scontent.fknu1-1.fna.fbcdn.net/v/t39.30808-6/310529942_1234093307373780_5229665497444732448_n.jpg?stp=dst-jpg_p526x296&_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ijiJfMvRgkcAX8jism-&_nc_ht=scontent.fknu1-1.fna&oh=00_AfBu_DVhEHx1maokK2pqjc9JMPUVKsDu8mkUZT5LgmquiQ&oe=635F9E32"  alt="user-image" className="h-10 rounded-full cursor-pointer"/>
          </div>
     
     </div>
