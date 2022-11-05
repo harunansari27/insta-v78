@@ -11,7 +11,7 @@ export default function Header() {
       {/* Left */}
         <div className="cursor-pointer h-24 w-24 relative hidden lg:inline-grid">
             <Image
-                src="https://i.imgur.com/wvLiKam.png"
+                src="https://i.imgur.com/HSm7kRO.jpg"
                 layout='fill'
                 className="object-contain"
             />
@@ -38,7 +38,9 @@ export default function Header() {
          <div className="flex space-x-4 items-center">
          <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out"/>
          <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out"/>
-         <img src="https://scontent.fknu1-1.fna.fbcdn.net/v/t39.30808-6/310529942_1234093307373780_5229665497444732448_n.jpg?stp=dst-jpg_p526x296&_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ijiJfMvRgkcAX8jism-&_nc_ht=scontent.fknu1-1.fna&oh=00_AfBu_DVhEHx1maokK2pqjc9JMPUVKsDu8mkUZT5LgmquiQ&oe=635F9E32"  alt="user-image" className="h-10 rounded-full cursor-pointer"/>
+         <img src="https://scontent.fdel1-2.fna.fbcdn.net/v/t39.30808-6/310529942_1234093307373780_5229665497444732448_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=HkrNtRCdFYYAX-7kec-&_nc_ht=scontent.fdel1-2.fna&oh=00_AfDXJu3wKR4AiiDC5o_QwgjUL3fmg3M_zTpyZ56Jg0uCag&oe=636B7BB2"  alt="user-image" className="h-10 rounded-full cursor-pointer"/>
+
+
          </div>
     
     </div>
