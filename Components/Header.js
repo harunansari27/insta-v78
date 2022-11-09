@@ -19,7 +19,7 @@ export default function Header() {
 
         <div className="cursor-pointer h-24 w-10 relative  lg:hidden">
             <Image
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png"
+                src="https://i.ibb.co/Z2WZ7dR/logo-jpg-2.jpg"
                 layout='fill'
                 className="object-contain"
             />
