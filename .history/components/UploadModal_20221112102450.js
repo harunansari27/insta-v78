@@ -1,6 +1,6 @@
-import Modal from "react-modal";
 import { useRecoilState } from "recoil";
 import { modalState } from "../atom/modalAtom";
+import Modal from "react-modal";
 import { CameraIcon } from "@heroicons/react/outline";
 import { useRef, useState } from "react";
 import {
@@ -11,14 +11,14 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { db, storage } from "../firebase";
-import { useSession } from "next-auth/react";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
+import { userState } from "../atom/userAtom";
 
 export default function UploadModal() {
   const [open, setOpen] = useRecoilState(modalState);
   const [selectedFile, setSelectedFile] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { data: session } = useSession();
+  const [currentUser] = useRecoilState(userState)
   async function uploadPost() {
     if (loading) return;
 
@@ -26,8 +26,8 @@ export default function UploadModal() {
 
     const docRef = await addDoc(collection(db, "posts"), {
       caption: captionRef.current.value,
-      username: session.user.username,
-      profileImg: session.user.image,
+      username: currentUser?.username,
+      profileImg: currentUser.userImg,
       timestamp: serverTimestamp(),
     });
 
@@ -57,12 +57,11 @@ export default function UploadModal() {
   }
   const filePickerRef = useRef(null);
   const captionRef = useRef(null);
-
   return (
     <div>
- {open && (
+      {open && (
         <Modal
-         className="max-w-lg w-[90%] p-6 absolute top-56 left-[50%] translate-x-[-50%] bg-white border-2 rounded-md shadow-md"
+          className="max-w-lg w-[90%] p-6 absolute top-56 left-[50%] translate-x-[-50%] bg-white border-2 rounded-md shadow-md"
           isOpen={open}
           onRequestClose={() => {
             setOpen(false);
@@ -70,8 +69,7 @@ export default function UploadModal() {
           }}
         >
           <div className="flex flex-col justify-center items-center h-[100%]">
-          
-          {selectedFile ? (
+            {selectedFile ? (
               <img
                 onClick={() => setSelectedFile(null)}
                 src={selectedFile}
@@ -99,7 +97,7 @@ export default function UploadModal() {
               ref={captionRef}
             />
             <button
-                disabled={!selectedFile || loading}
+              disabled={!selectedFile || loading}
               onClick={uploadPost}
               className="w-full bg-red-600 text-white p-2 shadow-md hover:brightness-125 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:hover:brightness-100"
             >

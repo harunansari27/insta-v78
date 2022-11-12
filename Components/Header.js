@@ -9,6 +9,7 @@ import {modalState} from "../atom/modalAtom"
 
 export default function Header() {
   const { data: session } = useSession();
+  
   const [open, setOpen] = useRecoilState(modalState);
   return (
     <div className="shadow-sm border-b sticky top-0 bg-white z-30">
